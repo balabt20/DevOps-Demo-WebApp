@@ -1,16 +1,46 @@
 pipeline {
-  agent any 
+  agent any
   stages {
     stage('Static Code Analysis') { // Get code
       steps {
         // get code from our Git repository
-        git 'https://github.com/balabt20/DevOps-Demo-WebApp.git'
+        git 'https://github.com/premalathasubramaniam/DevOps-Demo-WebApp.git'
       }
     }
-    stage('Build') {
+    stage('build') {
       steps {
-        // run Gradle to execute compile and unit testing
-        sh 'gradle clean compileJava test'
+      //sh 'mvn --version'
+      git 'https://github.com/premalathasubramaniam/DevOps-Demo-WebApp.git'
+      }
+    }
+    stage('UI Test') {
+      steps {
+      git 'https://github.com/premalathasubramaniam/DevOps-Demo-WebApp.git'
+      }
+    }
+    stage('Performance Test') {
+      steps {
+      git 'https://github.com/premalathasubramaniam/DevOps-Demo-WebApp.git'
+      }
+    }
+    stage('Deploy To QA') {
+      steps {
+      git 'https://github.com/premalathasubramaniam/DevOps-Demo-WebApp.git'
+      }
+    }
+    stage('Store Artifact') {
+      steps {
+      git 'https://github.com/premalathasubramaniam/DevOps-Demo-WebApp.git'
+      }
+    }
+    stage('Deploy To Prod') {
+      steps {
+      git 'https://github.com/premalathasubramaniam/DevOps-Demo-WebApp.git'
+      }
+    }
+    stage('Sanity Test') {
+      steps {
+      git 'https://github.com/premalathasubramaniam/DevOps-Demo-WebApp.git'
       }
     }
   }
