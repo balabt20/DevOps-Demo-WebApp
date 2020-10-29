@@ -11,6 +11,8 @@ pipeline {
       steps {
       //sh 'mvn --version'
       git 'https://github.com/balabt20/DevOps-Demo-WebApp.git'
+      echo 'maven clean'
+      bat 'mvn -f DevOps-Demo-WebApp/pom.xml clean install'
       }
     }
     stage('UI Test') {
